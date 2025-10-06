@@ -191,7 +191,7 @@ print(analyse_scores(empty_list))
 - Add a "passing_rate" (scores >= 60)
 
 **Make:**
-- Create a function that analyzes sales data (total revenue, average sale, best/worst months)
+- Create a function that analyses sales data (total revenue, average sale, best/worst months)
 
 ---
 
