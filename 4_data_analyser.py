@@ -30,7 +30,7 @@ def analyse_scores(scores):
     
     # calculate pass rate
     passes = len([score >= 60 for score in scores])
-    passing_rate = (passes/count) * 100
+    passing_rate = round((passes/count) * 100, 2)
 
     return {
         "average": round(average, 2),
