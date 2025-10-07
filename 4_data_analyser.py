@@ -34,7 +34,7 @@ def analyse_scores(scores):
         "average": round(average, 2),
         "highest": highest,
         "lowest": lowest,
-        "total_students": len(scores),
+        "total_students": count,
         "grade_distribution": grade_counts,
         'grade_distribution0': percentage_dist,
         "median": median,
