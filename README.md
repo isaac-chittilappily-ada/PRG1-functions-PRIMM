@@ -67,7 +67,7 @@ print(f"£{calculate_total(100, 0.08, 10):.2f}")
 - Add a tip parameter with a default of 12%
 
 **Make:**
-- Create a function that calculates the final grade with weighted assignments (homework 30%, tests 70%)
+- Create a function that analyses sales data (total revenue, average sale, best/worst months)
 
 ---
 
@@ -191,7 +191,7 @@ print(analyse_scores(empty_list))
 - Add a "passing_rate" (scores >= 60)
 
 **Make:**
-- Create a function that analyses sales data (total revenue, average sale, best/worst months)
+- Create a function that calculates the final grade with weighted assignments (homework 30%, tests 70%)
 
 ---
 
