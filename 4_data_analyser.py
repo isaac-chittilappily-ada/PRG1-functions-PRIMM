@@ -29,7 +29,7 @@ def analyse_scores(scores):
     percentage_dist = {key: round(value/count, 2) * 100 for key, value in grade_counts.items()}
     
     # calculate pass rate
-    passes = len([score >= 60 for score in scores])
+    passes = len([score for score in scores if score >= 60])
     passing_rate = round((passes/count) * 100, 2)
 
     return {
@@ -44,7 +44,7 @@ def analyse_scores(scores):
     }
 
 # Test data
-test_scores = [85, 92, 78, 90, 87, 95, 82, 88, 91, 79]
+test_scores = [85, 92, 78, 90, 87, 95, 82, 59, 91, 79]
 empty_list = []
 
 print("Test Results:")
