@@ -40,7 +40,7 @@ def analyse_scores(scores):
         "lowest": lowest,
         "total_students": count,
         "grade_distribution": grade_counts,
-        'grade_distribution0': grade_dist,
+        'grade_distribution': grade_dist,
         "median": median,
         'passing_rate': passing_rate
     }
