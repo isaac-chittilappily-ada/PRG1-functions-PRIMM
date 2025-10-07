@@ -1,3 +1,5 @@
+from math import ceil
+
 def analyse_scores(scores):
     if not scores:
         return {"error": "No scores provided"}
@@ -7,7 +9,7 @@ def analyse_scores(scores):
     average = total / count
     highest = max(scores)
     lowest = min(scores)
-    median = sorted(scores)[count // 2]
+    median = sorted(scores)[ceil(count / 2)]
     
     # Count grades
     grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
