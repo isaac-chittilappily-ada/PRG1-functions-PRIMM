@@ -23,7 +23,7 @@ def check_password_strength(password):
     else:
         feedback.append("Password should contain numbers")
 
-    if any(char in specials for char in password):
+    if any(password in specials for char in password):
         score += 1
     else:
         feedback.append('Password should contain specials')

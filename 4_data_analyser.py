@@ -2,10 +2,12 @@ def analyse_scores(scores):
     if not scores:
         return {"error": "No scores provided"}
     
+    count = len(scores)
     total = sum(scores)
-    average = total / len(scores)
+    average = total / count
     highest = max(scores)
     lowest = min(scores)
+    median = scores[count // 2]
     
     # Count grades
     grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
@@ -20,13 +22,21 @@ def analyse_scores(scores):
             grade_counts["D"] += 1
         else:
             grade_counts["F"] += 1
+
+    percentage_dist = {key: round(value/count, 2) * 100 for key, value in grade_counts.items()}
     
+    passes = len([score >= 60 for score in scores])
+    passing_rate = (passes/count) * 100
+
     return {
         "average": round(average, 2),
         "highest": highest,
         "lowest": lowest,
         "total_students": len(scores),
-        "grade_distribution": grade_counts
+        "grade_distribution": grade_counts,
+        'grade_distribution0': percentage_dist,
+        "median": median,
+        'passing_rate': passing_rate
     }
 
 # Test data
