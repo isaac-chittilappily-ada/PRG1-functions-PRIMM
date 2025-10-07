@@ -7,7 +7,7 @@ def analyse_scores(scores):
     average = total / count
     highest = max(scores)
     lowest = min(scores)
-    median = scores[count // 2]
+    median = sorted(scores)[count // 2]
     
     # Count grades
     grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
