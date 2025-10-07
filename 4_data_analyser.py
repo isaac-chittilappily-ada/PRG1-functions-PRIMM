@@ -27,7 +27,7 @@ def analyse_scores(scores):
 
     # Task 2
     # make a dictionary for percentage distribution of grades
-    percentage_dist = {key: round(value/count, 2) * 100 for key, value in grade_counts.items()}
+    grade_dist = {key: round(value/count, 2) * 100 for key, value in grade_counts.items()}
     
     # Task 3
     # calculate pass rate
@@ -40,7 +40,7 @@ def analyse_scores(scores):
         "lowest": lowest,
         "total_students": count,
         "grade_distribution": grade_counts,
-        'grade_distribution0': percentage_dist,
+        'grade_distribution0': grade_dist,
         "median": median,
         'passing_rate': passing_rate
     }
