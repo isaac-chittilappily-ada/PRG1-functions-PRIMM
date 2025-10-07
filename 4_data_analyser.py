@@ -23,8 +23,10 @@ def analyse_scores(scores):
         else:
             grade_counts["F"] += 1
 
+    # make a dictionary for percentage distribution of grades
     percentage_dist = {key: round(value/count, 2) * 100 for key, value in grade_counts.items()}
     
+    # calculate pass rate
     passes = len([score >= 60 for score in scores])
     passing_rate = (passes/count) * 100
 
